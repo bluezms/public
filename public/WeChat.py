@@ -23,10 +23,10 @@ sys.setdefaultencoding('utf8')
 
 class WeChat:
     def __init__(self):
-        self.CORPID = 'wwf93d8138e15e65d6'
-        self.CORPSECRET = 'ZW2_CbZck4eVSfevT-qENZpzQXuDhHfBuw0A-Fvr4jI'
-        self.AGENTID = '1000002'
-        self.TOUSER = "ZhengMingShe"  # 接收者用户名
+        self.CORPID = '***********'
+        self.CORPSECRET = '*********************************'
+        self.AGENTID = '**************'
+        self.TOUSER = "**********"  # 接收者用户名
 
     def _get_access_token(self):
         url = 'https://qyapi.weixin.qq.com/cgi-bin/gettoken'
@@ -79,4 +79,4 @@ class WeChat:
 
 if __name__ == '__main__':
     wx = WeChat()
-    wx.send_data("6不6")
+    wx.send_data("test")
