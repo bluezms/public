@@ -36,7 +36,7 @@ class SendEmail(object):
 
         try:
             # s = smtplib.SMTP_SSL('****.****.cn', 25)
-            s = smtplib.SMTP('mail.fnii.cn', self.port)
+            s = smtplib.SMTP('****.****.cn', self.port)
             s.login(_user, _pwd)
             s.sendmail(_user, _to, msg.as_string())
             s.quit()
