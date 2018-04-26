@@ -15,8 +15,8 @@ import smtplib
 class SendEmail(object):
     def __init__(self):
         self.port = 25
-        self.fromemail = 'zhengmingshe@fnii.cn'
-        self.emailpasswd = 'zms123321'
+        self.fromemail = 'test@test.com'
+        self.emailpasswd = '******'
 
     def sendemail(self, subject, msg, fromemail=None, emailpasswd=None, toemail=None):
         '''实现发送邮件功能函数'''
@@ -35,7 +35,7 @@ class SendEmail(object):
         msg["To"] = _to
 
         try:
-            # s = smtplib.SMTP_SSL('mail.fnii.cn', 25)
+            # s = smtplib.SMTP_SSL('****.****.cn', 25)
             s = smtplib.SMTP('mail.fnii.cn', self.port)
             s.login(_user, _pwd)
             s.sendmail(_user, _to, msg.as_string())
@@ -47,4 +47,4 @@ class SendEmail(object):
 
 if __name__ == '__main__':
     email = SendEmail()
-    email.sendemail('test', 'test', 'zhengmingshe@fnii.cn', 'zms123321', 'zhengmingshe@fnii.cn')
+    email.sendemail('test', 'test', 'test@test.com', '******', 'test@test.com')
